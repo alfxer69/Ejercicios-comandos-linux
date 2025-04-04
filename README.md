@@ -98,7 +98,7 @@ Ejercicios comandos Linux
  mkdir dir2
  ls -l
 42. Utilizando la notación simbólica, eliminar todos los permisos de escritura (propietario, grupo, otros) del directorio dir2.  
- chmod 555 dir2
+ chmod 555 dir2 / chmode u-w,g-w,o-w dir2
 43. Utilizando la notación octal, eliminar el permiso de lectura del directorio dir2, al resto de los usuarios.  
  chmod 551 dir2
 44. ¿Cuáles son ahora los permisos asociados a dir2?  
@@ -168,9 +168,9 @@ Ejercicios comandos Linux
 59. Crear el directorio menus bajo correo sin moverse del directorio actual.  
  mkdir ../correo/menus
 60. Posicionarse en el directorio HOME. Borrar los directorios que cuelgan de fuentes que acaben en un número que no sea el 1.  
- cd $HOME
+ cd $HOME / rm -rf fuentes/*[^1]
 61. Ver si existe el archivo tty2 en el directorio dev. En caso de que exista, ver su fecha de creación o actualización.  
-  find PRUEBA/fuentes -type d -name "tty2" -exec ls -l {} \;
+  find PRUEBA/fuentes -type d -name "tty2" -exec ls -l {} \; / stat /dev/tty2
 62. Ver los permisos que tienen los archivos que empiecen por tt del directorio /dev.  
  ls -l /dev/tt*
 63. Visualizar la lista de los archivos ordinarios que están en el directorio /usr/bin.  
